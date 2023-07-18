@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+class Fact
+{
+private:
+    int num;
+public:
+    void setNum(int n)
+    {
+        num=n;
+    }
+    int getNum()
+    {
+        return num;
+    }
+    int getFact()
+    {
+        int fact=1;
+        while(num>0){
+
+            fact=num*fact;
+            num=num-1;
+
+        }
+        return fact;
+
+    }
+};
+int main()
+{
+    Fact x;
+    int n;
+    cout<<"Calculate Factorial of a number::"<<endl<<"Enter the number"<<endl;
+    cin>>n;
+    x.setNum(n);
+    cout<<"The Factorial of "<<n<<" = "<<x.getFact();
+
+    return 0;
+}
