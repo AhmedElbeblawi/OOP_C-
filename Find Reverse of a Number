@@ -1,0 +1,39 @@
+#include <string>
+#include <iostream>
+using namespace std;
+
+class Reverse {
+private:
+    string n;
+
+public:
+    void setNums(string x) {
+        n = x;
+    }
+
+    string getNum() {
+        return n;
+    }
+
+    string getReverse() {
+         int s=n.size();
+        string reversed;
+        for(int i=s-1;i>=0 ;i--)
+        {
+           reversed = reversed +n[i];
+        }
+
+        return reversed;
+    }
+};
+
+int main() {
+    string x;
+    Reverse ob;
+    cout << "Enter The Number: ";
+    cin >> x;
+    ob.setNums(x);
+    cout << "Reversed Number: " << ob.getReverse() <<endl;
+
+    return 0;
+}
