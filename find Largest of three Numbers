@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+class Max
+{
+private:
+    int n1;
+    int n2;
+    int n3;
+public:
+    void setNums(int x1,int x2,int x3)
+    {
+        n1=x1;
+        n2=x2;
+        n3=x3;
+    }
+    int getNum()
+    {
+        return n1,n2,n3;
+    }
+    int getMax()
+    {
+        int max=n1;
+        for(int i=0;i<3;i++)
+        {
+            if(n2>max)
+            {
+                max=n2;
+            }
+            else if(n3>max){
+                max=n3;
+            }
+        }
+        return max;
+
+    }
+};
+int main()
+{
+
+    int x1,x2,x3;
+
+    cout<<"Enter The Numbers"<<endl;
+    cin>>x1;
+    cin>>x2;
+    cin>>x3;
+    Max m;
+    m.setNums(x1,x2,x3);
+    cout<<"Max is : "<<m.getMax();
+
+    return 0;
+}
